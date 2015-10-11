@@ -3,11 +3,14 @@
 		<title>Richard Tutorial Sample</title>
 	</head>
 	<body>
-		<h2> Crazy Big </h2>
-		<p> Hi there!</p>
-		<p> It works! </p>
-		<em>emphasize</em>
-		<strong> strong </strong>
+
+		{% for post in posts %}
+			<div>
+			<h1><a href="#">{{post.title}}</a>></h1>
+			<p>{{post.published_date}}</p>
+			{{post.text|linebreaks}}
+			</div>
+		{% endfor %}
 
 		</table>
 	</body>
