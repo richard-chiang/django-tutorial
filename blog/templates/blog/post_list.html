@@ -1,17 +1,12 @@
-<html>
-	<head>
-		<title>Richard Tutorial Sample</title>
-	</head>
-	<body>
+{%extends "blog/base.html"%}
 
-		{% for post in posts %}
-			<div>
-			<h1><a href="#">{{post.title}}</a>></h1>
-			<p>{{post.published_date}}</p>
-			{{post.text|linebreaks}}
-			</div>
-		{% endfor %}
+{%block content%}
+{% for post in posts %}
 
-		</table>
-	</body>
-</html>
+<div >
+	<h1><a href = "{% url "post_detail" pk=post.pk%}">{{post.title}}</a></h1>
+	<p>{{post.published_date}}</p>
+		{{post.text|linebreaks}}
+</div>
+{% endfor %}
+{%endblock content%}

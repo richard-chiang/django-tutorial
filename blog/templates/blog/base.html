@@ -1,0 +1,22 @@
+{% load staticfiles%}
+
+
+<html>
+	<head>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+		<link href='https://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="{%static "css/blog.css"%}">
+
+		<title>Richard Tutorial Sample</title>
+	</head>
+	<body>
+		<a href="{% url "post_new" %}" class="top-menu">
+		<span class="glyphicon glyphicon-plus"></span></a>
+		
+		{%block content%}
+		{%endblock%}
+
+	</body>
+</html>
